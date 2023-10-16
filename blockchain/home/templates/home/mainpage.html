@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Blockchain Disintegration</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'stylesmain.css' %}">
+    </head>
+    <body>
+        <div class="banner">
+            <video autoplay loop muted plays-inline>
+                <source src="{% static 'Block1.mp4' %}" type="video/mp4">
+            </video>
+            <div class="navbar">
+                <img class="logo" src="{% static 'logo.png' %}">
+                <ul>
+                    <li><a href="about.html"></a></li>
+                    <li><a href="contact.html"></a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>BLOCK-CHAIN DISINTEGRATION TECHNIQUE</h1>
+                <div>
+                    <form method="post" action="{% url 'lock' %}">
+                    {% csrf_token %}
+                    <button type="submit">LOCK</button></form>
+                    <form method="post" action="{% url 'unlock' %}">
+                    {% csrf_token %}
+                    <button type="submit">UNLOCK</button></a></form>
+                    <form method="post" action="{% url 'chainprint' %}">
+                        {% csrf_token %}
+                    <button type="submit">DISPLAY</button></form>
+                    <form method="post" action="{% url 'startchain' %}">
+                    {% csrf_token %}
+                    <button type="submit">ADD BLOCK</button></form>
+                    <form method="post" action="{% url 'reset' %}">
+                        {% csrf_token %}
+                        <button type="submit"></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+.body{
+    margin: 0;
+    padding: 0;
+    background-image: url('redbackground.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+    background-size: cover;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+}
